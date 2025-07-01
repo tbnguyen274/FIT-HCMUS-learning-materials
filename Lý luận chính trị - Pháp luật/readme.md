@@ -1,2 +1,2 @@
-- Lý luận chính trị: https://drive.google.com/drive/u/0/folders/1zj_YIaSCgTy2SDToes95dbp89ahJIRKq
-- Pháp luật đại cương: 1ASVS4QZO5CfqcLGFuc1kpJhVvm_C8mFI
+- [Lý luận chính trị](https://drive.google.com/drive/folders/1zj_YIaSCgTy2SDToes95dbp89ahJIRKq?usp=drive_link)
+- [Pháp luật đại cương](https://drive.google.com/drive/folders/1ASVS4QZO5CfqcLGFuc1kpJhVvm_C8mFI?usp=drive_link)
