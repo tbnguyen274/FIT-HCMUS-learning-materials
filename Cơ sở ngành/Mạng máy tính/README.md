@@ -6,4 +6,6 @@
 - [Tài liệu thực hành](https://drive.google.com/drive/folders/0BwRvtlYjNsvrVWFoUk10b2tseTA?resourcekey=0-DBGetjWru5e8-X7-2xufcw&usp=drive_link)
 - [Knowledge Check](https://gaia.cs.umass.edu/kurose_ross/knowledgechecks/)
 - [Đồ án 1: Socket](https://docs.google.com/document/d/1ART-HEw2Z0uDu-jkQ1kyZth6CaY6gXQgrOHWDCACGcE/edit?usp=sharing)
+- [Link thực hành đồ án 1](https://github.com/tbnguyen274/SocketProgramming-FileTransfer)
 - [Đồ án 2: Wireshark](https://drive.google.com/drive/folders/18QF1rQRGFPAsupAbl5er4aNcDxTn7TpH)
+- [Sách Computer Networking: A Top-Down Approach - 8th edition](https://drive.google.com/file/d/1-ZVKTm6kNOTMYRwVqyJHtMLKWgWDkS30/view?usp=sharing)
