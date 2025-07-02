@@ -1,0 +1,56 @@
+State	White	Black	Hispanic
+Alabama	49	82	107
+Alaska	31	73	72
+Arizona	38	74	114
+Arkansas	56	97	103
+California	22	56	79
+Colorado	31	80	113
+Connecticut	15	59	89
+Delaware	32	85	103
+District of Columbia	2	81	85
+Florida	37	82	58
+Georgia	46	81	132
+Hawaii	20	64	100
+Idaho	36	NA	105
+Illinois	26	94	90
+Indiana	42	91	95
+Iowa	30	86	97
+Kansas	37	86	100
+Kentucky	53	84	92
+Louisiana	43	92	40
+Maine	29	NA	NA
+Maryland	26	67	62
+Massachusetts	16	56	88
+Michigan	27	80	81
+Minnesota	21	89	105
+Mississippi	52	93	52
+Missouri	41	92	80
+Montana	28	NA	64
+Nebraska	29	85	105
+Nevada	40	77	108
+New Hampshire	21	34	58
+New Jersey	13	67	69
+New Mexico	39	56	85
+New York	17	53	64
+North Carolina	43	79	147
+North Dakota	20	NA	NA
+Ohio	38	93	80
+Oklahoma	50	84	97
+Oregon	35	69	103
+Pennsylvania	24	82	91
+Rhode Island	19	55	94
+South Carolina	44	79	96
+South Dakota	27	NA	77
+Tennessee	50	90	120
+Texas	40	76	103
+Utah	32	45	107
+Vermont	24	NA	NA
+Virginia	30	68	71
+Washington	30	56	101
+West Virginia	47	67	9
+Wisconsin	24	111	98
+Wyoming	36	NA	81
+Residence Unknown	NA	NA	NA
+Guam	NA	NA	NA
+Puerto Rico	NA	NA	NA
+Virgin Islands	NA	NA	NA
