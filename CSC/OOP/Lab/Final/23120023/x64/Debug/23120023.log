@@ -1,0 +1,4 @@
+﻿  23120023.cpp
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\23120023\23120023\23120023.cpp(226,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\23120023\23120023\23120023.cpp(232,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  23120023.vcxproj -> D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\23120023\x64\Debug\23120023.exe

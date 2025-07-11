@@ -1,0 +1,351 @@
+﻿CREATE DATABASE DangKyChuyenDe
+go
+use DangKyChuyenDe
+go
+
+CREATE TABLE SINHVIEN (
+	MASV VARCHAR(8),
+	HOTEN NVARCHAR(50),
+	PHAI NVARCHAR(3),
+	NGAYSINH DATE,
+	DIACHI NVARCHAR(50),
+	MANGANH NVARCHAR(10),
+
+	PRIMARY KEY (MASV)
+)
+
+CREATE TABLE NGANH (
+	MANGANH NVARCHAR(10),
+	TENNGANH NVARCHAR(50),
+	SOCD INT,
+	TSSV INT,
+
+	PRIMARY KEY (MANGANH)
+)
+
+CREATE TABLE CHUYENDE (
+	MACD NVARCHAR(10),
+	TENCD NVARCHAR(50),
+	SOSVTD INT,
+
+	PRIMARY KEY (MACD)
+)
+
+CREATE TABLE CD_NGANH (
+	MACD NVARCHAR(10),
+	MANGANH NVARCHAR(10),
+
+	PRIMARY KEY(MACD, MANGANH)
+)
+CREATE TABLE CD_MO (
+	MACD NVARCHAR(10),
+	HOCKY INT,
+	NAM INT,
+
+	PRIMARY KEY (MACD, HOCKY, NAM)
+)
+
+CREATE TABLE DANGKY (
+	MASV VARCHAR(10),
+	MACD NVARCHAR(10),
+	HOCKY INT,
+	NAM INT,
+	DIEM DECIMAL(2,2)
+
+	PRIMARY KEY (MASV, MACD, HOCKY, NAM)
+)
+
+--  a. Liệt kê danh sách sinh viên gồm mã, họ tên, phái, ngày sinh
+SELECT MASV, HOTEN, PHAI, NGAYSINH
+FROM SINHVIEN
+
+--  b. Liệt kê danh sách sinh viên thuộc ngành tên là ’Hệ thống thông tin’ (MÃSV, HỌTÊN, PHÁI, NGÀYSINH).
+SELECT SV.MASV, SV.HOTEN, SV.PHAI, SV.NGAYSINH
+FROM SINHVIEN SV JOIN NGANH NG ON (SV.MANGANH = NG.MANGANH)
+WHERE NG.TENNGANH = N'Hệ thống thông tin'
+
+--  c. Cho biết các ngành có tổng số sinh viên theo học từ trước đến nay lớn hơn 2000 (MÃNGÀNH, TÊNNGÀNH).
+SELECT MANGANH, TENNGANH
+FROM NGANH
+WHERE TSSV > 2000
+
+-- d. Những chuyên đề nào chỉ cho phép không quá 100 sinh viên đăng ký mỗi khi được mở (MÃCĐ, TÊNCĐ).
+SELECT MACD, TENCD
+FROM CHUYENDE
+WHERE SOSVTD <= 100
+
+--  e. Danh sách các chuyên đề bắt buộc đối với ngành tên là ’Mạng máy tính’ (MÃCĐ, TÊNCĐ).
+SELECT CD.MACD, CD.TENCD
+FROM CHUYENDE CD 
+JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+JOIN NGANH NG ON CDN.MANGANH = NG.MANGANH
+WHERE NG.TENNGANH = N'Mạng máy tính'
+
+--  f. Mỗi chuyên đề có tất cả bao nhiêu ngành phải học (MÃCĐ, TÊNCĐ, SỐ_NGÀNH).
+SELECT CD.MACD, CD.TENCD, COUNT(CDN.MANGANH) AS SO_NGANH
+FROM CHUYENDE CD LEFT JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+GROUP BY CD.MACD, CD.TENCD
+
+--  g. Danh sách các sinh viên đăng ký học một chuyên đề tên là ’Java’ nhiều hơn 1 lần (MÃSV, HỌTÊN).
+SELECT SV.MASV, SV.HOTEN
+FROM DANGKY DK 
+JOIN SINHVIEN SV ON DK.MASV = SV.MASV
+JOIN CHUYENDE CD ON DK.MACD = CD.MACD
+WHERE CD.TENCD = 'Java'
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(CD.MACD) > 1
+
+--  h. Cho danh sách các sinh viên thuộc ngành tên là ’Hệ thống thông tin’ đã đăng ký học chuyên đề “Oracle” (MÃSV, HỌTÊN).
+SELECT DISTINCT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+JOIN NGANH NG ON SV.MANGANH = NG.MANGANH
+JOIN CHUYENDE CD ON DK.MACD = CD.MACD
+WHERE NG.TENNGANH = N'Hệ thống thông tin' AND CD.TENCD = 'Oracle'
+
+-- i. Danh sách các ngành phải học nhiều hơn 2 chuyên đề (MÃNGÀNH, TÊNNGÀNH).
+SELECT NG.MANGANH, NG.TENNGANH
+FROM NGANH NG JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH
+GROUP BY NG.MANGANH, NG.TENNGANH
+HAVING COUNT(CDN.MACD) > 2
+
+-- j. Cho danh sách các sinh viên đã đăng ký nhiều hơn 2 chuyên đề trong học kỳ 1 năm 2009 (MÃSV, HỌTÊN).
+SELECT SV.MASV, SV.HOTEN
+FROM DANGKY DK
+JOIN SINHVIEN SV ON DK.MASV = SV.MASV
+WHERE DK.HOCKY = 1 AND DK.NAM = 2009
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(DK.MACD) > 2
+
+--  k. Cho biết các ngành phải học chuyên đề ’Java’ hoặc chuyên đề ’Oracle’.
+SELECT NG.MANGANH, NG.TENNGANH
+FROM NGANH NG
+JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH
+JOIN CHUYENDE CD ON CDN.MACD = CD.MACD
+WHERE CD.TENCD = 'Java' OR CD.TENCD = 'Oracle'
+
+-- l. Cho biết các ngành vừa phải học chuyên đề ’Java’ vừa phải học chuyên đề ’Oracle’.
+SELECT NG.MANGANH, NG.TENNGANH
+FROM NGANH NG
+JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH
+JOIN CHUYENDE CD ON CDN.MACD = CD.MACD
+WHERE CD.TENCD = 'Java' OR CD.TENCD = 'Oracle'
+GROUP BY NG.MANGANH, NG.TENNGANH
+HAVING COUNT(DISTINCT CD.TENCD) = 2
+
+-- m. Cho biết các ngành phải học chuyên đề ’Java’ nhưng không phải học chuyên đề ’Oracle’.
+SELECT NG.MANGANH, NG.TENNGANH
+FROM NGANH NG
+JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH
+JOIN CHUYENDE CD ON CDN.MACD = CD.MACD
+WHERE CD.TENCD = 'Java'
+EXCEPT
+SELECT NG.MANGANH, NG.TENNGANH
+FROM NGANH NG
+JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH
+JOIN CHUYENDE CD ON CDN.MACD = CD.MACD
+WHERE CD.TENCD = 'Oracle'
+
+-- CÁCH 2
+SELECT NG.MANGANH, NG.TENNGANH
+FROM NGANH NG
+JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH
+JOIN CHUYENDE CD ON CDN.MACD = CD.MACD
+WHERE CD.TENCD = 'Java'
+AND NG.MANGANH NOT IN (
+	SELECT NG2.MANGANH
+	FROM NGANH NG2
+	JOIN CD_NGANH CDN2 ON NG2.MANGANH = CDN2.MANGANH
+	JOIN CHUYENDE CD2 ON CDN2.MACD = CD2.MACD
+	WHERE CD2.TENCD = 'Oracle'
+)
+
+--  n. Liệt kê tên các chuyên đề mà sinh viên có mã là “0012345” đã học.
+SELECT CD.TENCD
+FROM DANGKY DK
+JOIN CHUYENDE CD ON DK.MACD = CD.MACD
+WHERE DK.MASV = '0012345'
+
+--  o. Danh sách các sinh viên đã đăng ký học 2 chuyên đề trong học kỳ 1 năm 2004.
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+WHERE DK.HOCKY = 1 AND DK.NAM = 2004
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(DK.MACD) = 2
+
+--  p. Danh sách các sinh viên đã đăng ký học 2 chuyên đề trong học kỳ 1 năm 2004 đều có điểm là “Đạt”.
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+WHERE DK.HOCKY = 1 AND DK.NAM = 2004 AND DIEM = N'Đạt'
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(DK.MACD) = 2
+
+--  q. Cho danh sách các sinh viên đã học tất cả các chuyên đề bắt buôc đối với ngành ’Hê thống thông tin’.
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+JOIN NGANH NG ON NG.MANGANH = SV.MANGANH
+JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH AND DK.MACD = CDN.MACD
+JOIN CHUYENDE CD ON CDN.MACD = CD.MACD
+WHERE NG.TENNGANH = N'Hệ thống thông tin'
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(DISTINCT CD.MACD) = (
+	SELECT SOCD
+	FROM NGANH
+	WHERE TENNGANH = N'Hệ thống thông tin'
+)
+
+--  r. Danh sách các sinh viên đã đăng ký học nhiều hơn 1 chuyên đề trong năm học 2005.
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+WHERE DK.NAM = 2005
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(DK.MACD) > 1
+
+--  s. Danh sách các sinh viên thuôc ngành ’Hệ thống thông tin’ đã học chuyên đề
+-- ’Oracle’ mà không học chuyên đề ’CSDL phân tán’ trong năm 2005.
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN NGANH NG ON SV.MANGANH = NG.MANGANH
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+JOIN CHUYENDE CD ON CD.MACD = DK.MACD
+WHERE NG.TENNGANH = N'Hệ thống thông tin' AND CD.TENCD = 'Oracle' AND DK.NAM = 2005
+AND SV.MASV NOT IN (
+    SELECT DK2.MASV
+    FROM DANGKY DK2
+    JOIN CHUYENDE CD2 ON DK2.MACD = CD2.MACD
+    WHERE CD2.TENCD = 'CSDL phân tán' AND DK2.NAM = 2005
+ )
+
+--  t. Cho đến hiên tại, cho biết mỗi chuyên ngành có bao nhiêu sinh viên theo học.
+
+/*
+ u. Liệt kê các thể hiện dữ liệu cho biết tất cả các sinh viên thuộc ngành tên là ’Hệ
+ thống thông tin’ đăng ký học tất cả các chuyên đề bắt buộc đối với ngành ’Hệ
+ thống thông tin’ trong học kỳ 1 năm 2010 (MÃSV, MÃCĐ, HỌCKỲ, NĂM).
+*/
+SELECT DK.MASV, DK.MACD, DK.HOCKY, DK.NAM
+FROM DANGKY DK
+JOIN SINHVIEN SV ON DK.MASV = SV.MASV
+JOIN NGANH NG ON SV.MANGANH = NG.MANGANH
+WHERE NG.TENNGANH = N'Hệ thống thông tin'
+AND DK.HOCKY = 1 AND DK.NAM = 2010
+AND DK.MASV IN (
+	SELECT SV.MASV
+	FROM SINHVIEN SV
+	JOIN DANGKY DK ON SV.MASV = DK.MASV
+	JOIN NGANH NG ON NG.MANGANH = SV.MANGANH
+	JOIN CD_NGANH CDN ON NG.MANGANH = CDN.MANGANH AND DK.MACD = CDN.MACD
+	WHERE NG.TENNGANH = N'Hệ thống thông tin' AND DK.HOCKY = 1 AND DK.NAM = 2010
+	GROUP BY SV.MASV
+	HAVING COUNT(DISTINCT DK.MACD) = (
+		SELECT COUNT(*)
+		FROM CD_MO CDM
+		JOIN CD_NGANH CDN2 ON CDM.MACD = CDN2.MACD
+		JOIN NGANH NG2 ON CDN2.MANGANH = NG2.MANGANH
+		WHERE NG2.TENNGANH = N'Hệ thống thông tin' AND CDM.HOCKY = 1 AND CDM.NAM = 2010
+	)
+)
+
+-- v. Danh sách các sinh viên chưa học chuyên đề nào (MÃSV, HỌTÊN).
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+WHERE NOT EXISTS (
+	SELECT 1
+	FROM DANGKY DK
+	WHERE DK.MASV = SV.MASV
+)
+
+-- CACH 2
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+LEFT JOIN DANGKY DK ON SV.MASV = DK.MASV
+WHERE DK.MASV IS NULL
+
+-- w. Cho biết năm nào, học kỳ nào mở tất cả các chuyên đề bắt buộc cho ngành “Hệ thống thông tin”.
+SELECT CDM.HOCKY, CDM.NAM
+FROM CD_MO CDM
+JOIN CD_NGANH CDN ON CDM.MACD = CDN.MACD
+JOIN NGANH NG ON CDN.MANGANH = NG.MANGANH
+WHERE NG.TENNGANH = N'Hệ thống thông tin'
+GROUP BY CDM.HOCKY, CDM.NAM, NG.SOCD
+HAVING COUNT(DISTINCT CDM.MACD) = NG.SOCD
+
+--  x. Cho biết mã, tên của các chuyên đề thuộc chuyên ngành của sinh viên có mã là “0012345” mà sinh viên này chưa đăng ký học.
+SELECT CD.MACD, CD.TENCD
+FROM CHUYENDE CD
+JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+WHERE CDN.MANGANH = (
+	SELECT MANGANH
+	FROM SINHVIEN
+	WHERE MASV = '0012345'
+)
+AND CD.MACD NOT IN (
+	SELECT DK.MACD
+	FROM DANGKY DK
+	WHERE DK.MASV = '0012345'
+)
+
+--  y. Danh sách các sinh viên thuộc ngành “Hệ thống thông tin” chỉ học duy nhất 1 chuyên đề trong học kỳ 1 năm 2005.
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN NGANH NG ON SV.MANGANH = NG.MANGANH
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+WHERE NG.TENNGANH = N'Hệ thống thông tin' AND DK.HOCKY = 1 AND DK.NAM = 2005
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(DK.MACD) = 1
+
+-- z. Cho biết tên các chuyên đề mà mọi ngành đều phải học chúng.
+SELECT CD.MACD, CD.TENCD
+FROM CHUYENDE CD
+JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+GROUP BY CD.MACD, CD.TENCD
+HAVING COUNT(DISTINCT CDN.MANGANH) = (
+    SELECT COUNT(*) FROM NGANH
+)
+
+--  aa. Danh sách các chuyên đề bắt buộc đối với chuyên ngành tên là “Mạng máy tính” đã được mở ra trong học kỳ 1 năm 2005.
+SELECT CD.MACD, CD.TENCD
+FROM CHUYENDE CD
+JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+JOIN NGANH NG ON NG.MANGANH = CDN.MANGANH
+WHERE NG.TENNGANH = N'Mạng máy tính'
+AND CD.MACD IN (
+	SELECT MACD
+	FROM CD_MO CDM
+	WHERE HOCKY = 1 AND NAM = 2005
+)
+
+SELECT CD.MACD, CD.TENCD
+FROM CHUYENDE CD
+JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+JOIN NGANH NG ON NG.MANGANH = CDN.MANGANH
+JOIN CD_MO CDM ON CD.MACD = CDM.MACD
+WHERE NG.TENNGANH = N'Mạng máy tính' AND CDM.HOCKY = 1 AND CDM.NAM = 2005
+
+/*
+ bb.Danh sách các chuyên đề vừa là chuyên đề bắt buộc cho chuyên ngành tên là “Hệ
+ thống thông tin” vừa là chuyên đề bắt buộc cho chuyên ngành tên là “Công nghệ tri thức”.
+*/
+
+SELECT CD.MACD, CD.TENCD
+FROM CHUYENDE CD
+JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+JOIN NGANH NG ON NG.MANGANH = CDN.MANGANH
+WHERE NG.TENNGANH = N'Hệ thống thông tin'
+INTERSECT
+SELECT CD.MACD, CD.TENCD
+FROM CHUYENDE CD
+JOIN CD_NGANH CDN ON CD.MACD = CDN.MACD
+JOIN NGANH NG ON NG.MANGANH = CDN.MANGANH
+WHERE NG.TENNGANH = N'Công nghệ tri thức'
+
+--  cc. Cho danh sách các sinh viên chưa từng học lại một chuyên đề nào.
+SELECT SV.MASV, SV.HOTEN
+FROM SINHVIEN SV
+JOIN DANGKY DK ON SV.MASV = DK.MASV
+GROUP BY SV.MASV, SV.HOTEN
+HAVING COUNT(DK.MACD) = COUNT(DISTINCT DK.MACD)

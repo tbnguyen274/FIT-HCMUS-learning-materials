@@ -1,0 +1,6 @@
+Biên dịch chương trình
+aarch64-linux-gnu-as hello.s -o hello.o
+aarch64-linux-gnu-gcc-9 hello.o -o hello.elf -lc -static
+
+- Chạy chương trình
+qemu-aarch64 ./hello.elf

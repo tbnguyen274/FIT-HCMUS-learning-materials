@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex02\main.cpp(54,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Ex02.vcxproj -> D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\x64\Debug\Ex02.exe

@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex03\main.cpp(69,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Ex03.vcxproj -> D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\x64\Debug\Ex03.exe

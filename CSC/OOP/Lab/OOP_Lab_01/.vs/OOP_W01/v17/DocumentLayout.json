@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A8A4024B-4250-4576-A72F-1CCC4C1BC56F}|Ex04\\Ex04.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex04\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A8A4024B-4250-4576-A72F-1CCC4C1BC56F}|Ex04\\Ex04.vcxproj|solutionrelative:Ex04\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{086C3515-D5C0-4156-9706-35D03CF2D8A5}|Ex03\\Ex03.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex03\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{086C3515-D5C0-4156-9706-35D03CF2D8A5}|Ex03\\Ex03.vcxproj|solutionrelative:Ex03\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15801A6-C50C-4451-9BCA-FAC63A300767}|Ex02\\Ex02.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex02\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F15801A6-C50C-4451-9BCA-FAC63A300767}|Ex02\\Ex02.vcxproj|solutionrelative:Ex02\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77728568-1572-459C-B3B9-1CCEB5FEF9E2}|Ex01\\Ex01.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex01\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{77728568-1572-459C-B3B9-1CCEB5FEF9E2}|Ex01\\Ex01.vcxproj|solutionrelative:Ex01\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex02\\main.cpp",
+              "RelativeDocumentMoniker": "Ex02\\main.cpp",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex02\\main.cpp",
+              "RelativeToolTip": "Ex02\\main.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-17T15:43:21.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex01\\main.cpp",
+              "RelativeDocumentMoniker": "Ex01\\main.cpp",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex01\\main.cpp",
+              "RelativeToolTip": "Ex01\\main.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-17T15:43:16.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex03\\main.cpp",
+              "RelativeDocumentMoniker": "Ex03\\main.cpp",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex03\\main.cpp",
+              "RelativeToolTip": "Ex03\\main.cpp",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-29T17:41:04.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex04\\main.cpp",
+              "RelativeDocumentMoniker": "Ex04\\main.cpp",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_01\\Ex04\\main.cpp",
+              "RelativeToolTip": "Ex04\\main.cpp",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T15:00:42.934Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

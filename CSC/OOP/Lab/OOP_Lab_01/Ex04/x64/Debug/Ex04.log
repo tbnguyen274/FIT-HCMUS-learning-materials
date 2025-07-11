@@ -1,0 +1,13 @@
+﻿  main.cpp
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(54,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(115,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(126,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(130,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(140,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(144,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(154,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(158,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(168,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(172,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\Ex04\main.cpp(192,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Ex04.vcxproj -> D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_W01\x64\Debug\Ex04.exe

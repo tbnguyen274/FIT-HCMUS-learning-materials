@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\SoNguyenLon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|solutionrelative:Ex05\\SoNguyenLon.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\SoNguyenLon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|solutionrelative:Ex05\\SoNguyenLon.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\LinkedList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|solutionrelative:Ex05\\LinkedList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501C1C08-1468-4C27-B9C5-EB02074E622C}|Ex04\\Ex04.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex04\\CString.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{501C1C08-1468-4C27-B9C5-EB02074E622C}|Ex04\\Ex04.vcxproj|solutionrelative:Ex04\\CString.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7A7D792D-1FEB-41CC-BBFB-22FEE804B050}|Ex05\\Ex05.vcxproj|solutionrelative:Ex05\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LinkedList.h",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\LinkedList.h",
+              "RelativeDocumentMoniker": "Ex05\\LinkedList.h",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\LinkedList.h",
+              "RelativeToolTip": "Ex05\\LinkedList.h",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-17T12:56:57.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SoNguyenLon.h",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\SoNguyenLon.h",
+              "RelativeDocumentMoniker": "Ex05\\SoNguyenLon.h",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\SoNguyenLon.h",
+              "RelativeToolTip": "Ex05\\SoNguyenLon.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-17T12:56:25.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CString.cpp",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex04\\CString.cpp",
+              "RelativeDocumentMoniker": "Ex04\\CString.cpp",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex04\\CString.cpp",
+              "RelativeToolTip": "Ex04\\CString.cpp",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-17T12:53:15.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SoNguyenLon.cpp",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\SoNguyenLon.cpp",
+              "RelativeDocumentMoniker": "Ex05\\SoNguyenLon.cpp",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\SoNguyenLon.cpp",
+              "RelativeToolTip": "Ex05\\SoNguyenLon.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-17T12:52:47.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\main.cpp",
+              "RelativeDocumentMoniker": "Ex05\\main.cpp",
+              "ToolTip": "D:\\OneDrive - VNU-HCMUS\\source\\repos\\HK4\\OOP\\Lab\\OOP_Lab_04\\Ex05\\main.cpp",
+              "RelativeToolTip": "Ex05\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-10T13:56:22.879Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
