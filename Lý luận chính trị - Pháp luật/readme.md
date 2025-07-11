@@ -1,2 +1,5 @@
 - [Lý luận chính trị](https://drive.google.com/drive/folders/1zj_YIaSCgTy2SDToes95dbp89ahJIRKq?usp=drive_link)
 - [Pháp luật đại cương](https://drive.google.com/drive/folders/1ASVS4QZO5CfqcLGFuc1kpJhVvm_C8mFI?usp=drive_link)
+- [TTHCM](https://drive.google.com/drive/folders/1nx_7yab0ZWPXZeJupNHJWvta1FQsyOXg)
+- [CNXHKH](https://drive.google.com/drive/folders/1Iv_8PTIc8C0xzKebrvPptKunFN4D2Po6)
+- [LSĐ](https://drive.google.com/drive/folders/1AAOzoqX6y2933BWdmnMZjGPqZkrXkF9K)
