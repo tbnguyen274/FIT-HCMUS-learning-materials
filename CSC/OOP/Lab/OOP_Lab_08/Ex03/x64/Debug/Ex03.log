@@ -1,6 +1,0 @@
-﻿  CongTy.cpp
-  main.cpp
-D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_Lab_08\Ex03\main.cpp(14,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  NhanVien.cpp
-  Generating Code...
-  Ex03.vcxproj -> D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_Lab_08\x64\Debug\Ex03.exe

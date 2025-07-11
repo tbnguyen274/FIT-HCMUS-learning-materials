@@ -1,5 +1,0 @@
-﻿  main.cpp
-D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_Lab_08\Ex02\main.cpp(61,22): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_Lab_08\Ex02\main.cpp(67,41): warning C4305: 'argument': truncation from 'double' to 'const float'
-D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_Lab_08\Ex02\main.cpp(68,30): warning C4305: 'argument': truncation from 'double' to 'const float'
-  Ex02.vcxproj -> D:\OneDrive - VNU-HCMUS\source\repos\HK4\OOP\Lab\OOP_Lab_08\x64\Debug\Ex02.exe
